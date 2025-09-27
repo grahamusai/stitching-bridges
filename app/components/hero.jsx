@@ -42,7 +42,7 @@ export function Hero() {
     return (
         <section
             ref={heroRef}
-            className="relative min-h-[600px] flex items-center justify-start bg-cover bg-center bg-no-repeat rounded-xl mx-10 my-20 overflow-hidden"
+            className="relative min-h-[600px] flex items-center justify-start bg-cover bg-center bg-no-repeat rounded-xl mx-3 md:mx-10 my-10 md:my-20 overflow-hidden"
             style={{
                 backgroundImage: "url(/images/hero.jpg)",
             }}
@@ -51,11 +51,16 @@ export function Hero() {
             <div ref={overlayRef} className="absolute inset-0 bg-black/70 rounded-xl transition-all duration-1000" />
 
             {/* Content */}
-            <div className="relative z-10 max-w-6xl px-24 text-left">
+            <div className="relative z-10 max-w-6xl px-24 text-center md:text-left">
                 {/* Heading */}
-                <h1 ref={titleRef} className="mb-12 text-5xl font-bold text-white leading-tight">
+                <h1 ref={titleRef} className="hidden md:block mb-12 text-5xl font-bold text-white leading-tight">
                     Building Your Vision <br />
                     with Strength & <br />
+                    Precision
+                </h1>
+                <h1 ref={titleRef} className="md:hidden mb-12 text-4xl font-bold text-white leading-tight">
+                    Building Your Vision 
+                    with Strength &
                     Precision
                 </h1>
                 <Button

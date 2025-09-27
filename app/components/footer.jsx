@@ -4,9 +4,9 @@ import { Instagram } from "lucide-react"
 
 export default function Footer() {
     return (
-        <footer className="bg-white border-t border-gray-200 mx-10 my-20 rounded-xl">
+        <footer className="bg-white  mx-10 mb-10 ">
             {/* Main Footer Content */}
-            <div className="max-w-6xl mx-auto px-8 py-20">
+            <div className="max-w-6xl mx-auto px-8 py-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {/* Logo/Brand */}
                     <div className="flex-shrink-0">
@@ -74,7 +74,7 @@ export default function Footer() {
             </div>
 
             {/* Copyright Section */}
-            <div className="border-t border-gray-900 bg-gray-50">
+            <div className="border-t border-gray-900 ">
                 <div className="max-w-6xl mx-auto px-4 py-4">
                     <p className="text-center font-semibold text-gray-900 text-sm">
                         2025 Stitching Bridges | All rights reserved

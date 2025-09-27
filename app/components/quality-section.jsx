@@ -30,7 +30,7 @@ export function QualitySection() {
             alt: "High-rise construction",
         },
         {
-            src: "/construction-team-working-on-building-foundation.jpg",
+            src: "/images/quality4.png",
             alt: "Foundation construction",
         },
     ]
@@ -147,7 +147,7 @@ export function QualitySection() {
     }
 
     return (
-        <section ref={sectionRef} className="bg-zinc-900 py-20 px-8 mx-10 my-20 rounded-xl overflow-hidden">
+        <section ref={sectionRef} className="bg-zinc-900 py-20 px-8 md:mx-10 my-20 rounded-xl overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
@@ -168,8 +168,9 @@ export function QualitySection() {
                         </h2>
 
                         <p className="text-gray-400 text-lg leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            With over 12 years of experience in construction, we deliver exceptional results that exceed expectations. 
+                            From residential homes to commercial complexes, our commitment to quality craftsmanship and attention to detail 
+                            ensures every project stands the test of time.
                         </p>
 
                         <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
@@ -193,7 +194,7 @@ export function QualitySection() {
                                     className="image-card flex-shrink-0 w-80 h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-orange-500/20 transition-all duration-500 cursor-pointer group"
                                     onClick={() => handleIndicatorClick(index)}
                                 >
-                                    <div className="relative w-full h-full overflow-hidden">
+                                    <div className="relative w-full h-full overflow-hidden hover:-skew-6">
                                         <img
                                             src={image.src || "/placeholder.svg"}
                                             alt={image.alt}

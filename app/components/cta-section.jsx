@@ -2,7 +2,7 @@ import { Button } from "../../components/ui/button"
 
 export function CTASection() {
   return (
-    <section className="relative py-20 px-8 mx-10 my-20 overflow-hidden rounded-xl">
+    <section className="relative py-20 px-8 md:mx-10 my-20 overflow-hidden rounded-xl">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

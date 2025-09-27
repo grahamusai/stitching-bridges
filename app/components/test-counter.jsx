@@ -7,7 +7,7 @@ export function TestCounter() {
     const countersRef = useRef(null)
     const skylineRef = useRef(null)
   return (
-    <section className="relative py-16 md:py-24 mx-10 mt-20 rounded-xl bg-black overflow-hidden min-h-[400px]">
+    <section className="relative py-16 md:py-24 md:mx-10 mt-20 rounded-xl bg-black overflow-hidden min-h-[400px]">
        
       {/* Blue border glow effect */}
       <div className="absolute inset-0 rounded-3xl border-2 border-blue-500/30 shadow-[0_0_30px_rgba(59,130,246,0.3)]" />

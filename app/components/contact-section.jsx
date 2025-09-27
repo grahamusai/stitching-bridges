@@ -1,6 +1,6 @@
 export default function ContactSection() {
     return (
-        <section className="relative min-h-[700px] flex items-center justify-center py-20 px-8 mx-10 my-20 rounded-xl overflow-hidden">
+        <section className="relative min-h-[700px] flex items-center justify-center py-20 px-8 mx-3 md:mx-10 md:my-20 overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 bg-transparent">
                 <div
@@ -22,8 +22,8 @@ export default function ContactSection() {
                         more information
                     </h2>
                     <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore
+                        Ready to start your construction project? Our experienced team is here to help bring your vision to life. 
+                        Contact us today for a free consultation and quote.
                     </p>
                 </div>
 

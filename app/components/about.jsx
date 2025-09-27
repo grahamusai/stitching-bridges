@@ -80,7 +80,7 @@ export function AboutSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#181818] text-white py-20 px-8 mx-10 my-20 rounded-xl">
+    <section ref={sectionRef} className="bg-[#181818] text-white py-20 px-8 md:mx-10 md:my-20 rounded-xl">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image and branding */}

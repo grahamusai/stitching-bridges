@@ -43,7 +43,7 @@ export function ServicesGrid() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 px-8 mx-10 my-20 max-w-7xl min-h-[600px]">
+    <section ref={sectionRef} className="py-16 px-4 max-w-7xl mx-auto min-h-[600px]">
       <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[600px]">
         {/* Top Left - General Contracting */}
         <div className="relative rounded-2xl overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
