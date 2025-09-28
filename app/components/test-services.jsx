@@ -1,5 +1,6 @@
 "use client"
 import { Button } from "../../components/ui/button"
+import Link from "next/link"
 
 export function TestServices() {
   return (
@@ -64,9 +65,11 @@ export function TestServices() {
         {/* Bottom Right - CTA Card */}
         <div className="relative rounded-2xl overflow-hidden bg-orange-500 p-6 flex flex-col justify-center group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:bg-orange-400">
           <h3 className="text-white text-2xl font-bold mb-6 leading-tight">Interested in starting a project?</h3>
-          <Button variant="secondary" className="bg-black text-white hover:bg-gray-800 w-fit">
-            GET A QUOTE →
-          </Button>
+          <Link href="/contact">
+            <Button variant="secondary" className="bg-black text-white hover:bg-gray-800 w-fit">
+              GET A QUOTE →
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

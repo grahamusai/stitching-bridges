@@ -44,9 +44,9 @@ export function Navbar() {
 
     const navLinks = [
         { href: "#", label: "HOME" },
-        { href: "#", label: "ABOUT" },
-        { href: "#", label: "SERVICES" },
-        { href: "#", label: "PROJECTS" },
+        { href: "#about", label: "ABOUT" },
+        { href: "#services", label: "SERVICES" },
+        { href: "#projects", label: "PROJECTS" },
         { href: "/contact", label: "CONTACT US" }
     ]
 
@@ -92,12 +92,14 @@ export function Navbar() {
                     </div>
 
                     {/* Desktop CTA Button */}
-                    <Button
-                        ref={ctaRef}
-                        className="hidden lg:block bg-orange-500 hover:bg-orange-600 text-black px-8 py-4 mt-8 rounded-md font-base transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-1"
-                    >
-                        GET A QUOTE
-                    </Button>
+                    <Link href="/contact">
+                        <Button
+                            ref={ctaRef}
+                            className="hidden lg:flex bg-orange-500 hover:bg-orange-600 justify-center items-center text-black px-8 py-4 mt-8 rounded-md font-base transition-all duration-300 hover:scale-110 hover:shadow-lg hover:rotate-1"
+                        >
+                            GET A QUOTE
+                        </Button>
+                    </Link>
 
                     {/* Mobile Menu Button */}
                     <button
@@ -146,12 +148,14 @@ export function Navbar() {
 
                     {/* Mobile CTA Button */}
                     <div className="p-6 border-t">
-                        <Button
-                            className="w-full bg-orange-500 hover:bg-orange-600 text-black py-4 rounded-md font-medium transition-all duration-300"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            GET A QUOTE
-                        </Button>
+                        <Link href="/contact">
+                            <Button
+                                className="w-full bg-orange-500 hover:bg-orange-600 text-black py-4 rounded-md font-medium transition-all duration-300"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                GET A QUOTE
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </MobileDrawer>

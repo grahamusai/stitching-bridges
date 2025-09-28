@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Link from "next/link"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -42,7 +43,7 @@ export function Hero() {
     return (
         <section
             ref={heroRef}
-            className="relative min-h-[600px] flex items-center justify-start bg-cover bg-center bg-no-repeat rounded-xl mx-3 md:mx-10 my-10 md:my-20 overflow-hidden"
+            className="relative min-h-[600px] flex items-center justify-start bg-cover bg-center bg-no-repeat rounded-xl  md:mx-10 my-10 md:my-20 overflow-hidden"
             style={{
                 backgroundImage: "url(/images/hero.jpg)",
             }}
@@ -59,16 +60,18 @@ export function Hero() {
                     Precision
                 </h1>
                 <h1 ref={titleRef} className="md:hidden mb-12 text-4xl font-bold text-white leading-tight">
-                    Building Your Vision 
+                    Building Your Vision
                     with Strength &
                     Precision
                 </h1>
-                <Button
-                    ref={buttonRef}
-                    className="bg-orange-500 hover:bg-orange-600 text-black px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-                >
-                    VIEW OUR PROJECTS <ArrowUpRight className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                </Button>
+                <Link href="/contact">
+                    <Button
+                        ref={buttonRef}
+                        className="bg-orange-500 hover:bg-orange-600 text-black px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+                    >
+                        START A PROJECT <ArrowUpRight className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                    </Button>
+                </Link>
             </div>
         </section>
     )

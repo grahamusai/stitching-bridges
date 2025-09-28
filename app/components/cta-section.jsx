@@ -1,4 +1,5 @@
 import { Button } from "../../components/ui/button"
+import Link from "next/link"
 
 export function CTASection() {
   return (
@@ -22,15 +23,17 @@ export function CTASection() {
           <span className="text-white">today</span>
         </p>
 
-        <Button
-          size="lg"
-          className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-semibold rounded-md transition-colors duration-200"
-        >
-          GET A QUOTE
-          <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </Button>
+        <Link href="/contact">
+          <Button
+            size="lg"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg font-semibold rounded-md transition-colors duration-200"
+          >
+            GET A QUOTE
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Button>
+        </Link>
       </div>
     </section>
   )

@@ -2,6 +2,7 @@
 
 import { Button } from "../../components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -147,7 +148,7 @@ export function QualitySection() {
     }
 
     return (
-        <section ref={sectionRef} className="bg-zinc-900 py-20 px-8 md:mx-10 my-20 rounded-xl overflow-hidden">
+        <section id="projects" ref={sectionRef} className="bg-zinc-900 py-20 px-8 md:mx-10 my-20 rounded-xl overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
@@ -173,10 +174,12 @@ export function QualitySection() {
                             ensures every project stands the test of time.
                         </p>
 
-                        <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
-                            GET A QUOTE
-                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
+                        <Link href="/contact">
+                            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
+                                GET A QUOTE
+                                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Button>
+                        </Link>
                     </div>
 
                     {/* Right Content - Scrollable Images */}

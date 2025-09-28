@@ -18,17 +18,31 @@ export function AboutSection() {
 
   const tabs = ["Materials", "Technology", "Approved"]
 
-  const features = [
-    "Premium grade cement & concrete",
-    "Reinforced steel & rebar",
-    "Eco-friendly bricks & blocks",
-    "Weather-resistant finishes",
-  ]
+  const tabContent = {
+    Materials: [
+      "Premium grade cement & concrete",
+      "Reinforced steel & rebar",
+      "Eco-friendly bricks & blocks",
+      "Weather-resistant finishes",
+    ],
+    Technology: [
+      "3D modeling & BIM integration",
+      "Drone surveying & monitoring",
+      "Smart building automation",
+      "Advanced project management software",
+    ],
+    Approved: [
+      "Licensed & bonded contractors",
+      "ISO 9001:2015 certified",
+      "OSHA safety compliance",
+      "Local building code certified",
+    ]
+  }
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Image animation
-      gsap.fromTo(imageRef.current, 
+      gsap.fromTo(imageRef.current,
         { opacity: 0, x: -100, rotation: -5 },
         {
           opacity: 1,
@@ -79,8 +93,24 @@ export function AboutSection() {
     return () => ctx.revert()
   }, [])
 
+  // Animate tab content changes
+  useEffect(() => {
+    if (featuresRef.current) {
+      gsap.fromTo(featuresRef.current.children,
+        { opacity: 0, x: 30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out"
+        }
+      )
+    }
+  }, [activeTab])
+
   return (
-    <section ref={sectionRef} className="bg-[#181818] text-white py-20 px-8 md:mx-10 md:my-20 rounded-xl">
+    <section id="about" ref={sectionRef} className="bg-[#181818] text-white py-20 px-8 md:mx-10 md:my-20 rounded-xl">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image and branding */}
@@ -138,8 +168,8 @@ export function AboutSection() {
 
               {/* Features list */}
               <div ref={featuresRef} className="space-y-4">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3 group hover:translate-x-2 transition-transform duration-300">
+                {tabContent[activeTab].map((feature, index) => (
+                  <div key={`${activeTab}-${index}`} className="flex items-center gap-3 group hover:translate-x-2 transition-transform duration-300">
                     <div className="bg-orange-500 rounded-full p-1 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                       <Check className="w-4 h-4 text-white" />
                     </div>

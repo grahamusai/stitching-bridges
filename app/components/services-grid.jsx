@@ -1,5 +1,6 @@
 "use client"
 import { Button } from "../../components/ui/button"
+import Link from "next/link"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -43,7 +44,7 @@ export function ServicesGrid() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 px-4 max-w-7xl mx-auto min-h-[600px]">
+    <section id="services" ref={sectionRef} className="py-16 px-4 max-w-7xl mx-auto min-h-[600px]">
       <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[600px]">
         {/* Top Left - General Contracting */}
         <div className="relative rounded-2xl overflow-hidden group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
@@ -108,9 +109,11 @@ export function ServicesGrid() {
         {/* Bottom Right - CTA Card */}
         <div className="relative rounded-2xl overflow-hidden bg-orange-500 p-6 flex flex-col justify-center group cursor-pointer transform transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:bg-orange-400">
           <h3 className="text-white text-2xl font-bold mb-6 leading-tight transform transition-all duration-300 group-hover:translate-y-[-5px]">Interested in starting a project?</h3>
-          <Button variant="secondary" className="bg-black text-white hover:bg-gray-800 w-fit transform transition-all duration-300 group-hover:scale-110 group-hover:translate-x-2">
-            GET A QUOTE →
-          </Button>
+          <Link href="/contact">
+            <Button variant="secondary" className="bg-black text-white hover:bg-gray-800 w-fit transform transition-all duration-300 group-hover:scale-110 group-hover:translate-x-2">
+              GET A QUOTE →
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
