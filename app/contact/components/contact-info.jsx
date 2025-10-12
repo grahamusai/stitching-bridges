@@ -16,7 +16,7 @@ const contactMethods = [
       </svg>
     ),
     title: "Phone",
-    value: "(555) 123-4567",
+    value: "+263 774 755 866",
     description: "Mon-Fri 8AM-6PM",
   },
   {
@@ -47,8 +47,8 @@ const contactMethods = [
       </svg>
     ),
     title: "Office",
-    value: "123 Construction Ave",
-    description: "Suite 100, Builder City, BC 12345",
+    value: "80A BROADLANDS, EMERALD HILL",
+    description: "Mon-Fri 8AM-6PM",
   },
 ]
 
