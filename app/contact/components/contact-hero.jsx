@@ -18,12 +18,13 @@ export function ContactHero() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-3 mb-8"
+            className="inline-flex items-center gap-3 mb-8 flex-col"
           >
             
             <h1 className="text-4xl md:text-6xl font-bold text-balance text-white">
               Stitching <span className="text-orange-500">Bridges</span>
             </h1>
+            <span className="text-orange-500 text-xl font-bold">Building Contractors</span>
           </motion.div>
 
           <motion.h2

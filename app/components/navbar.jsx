@@ -58,13 +58,14 @@ export function Navbar() {
                     <Link href='/'>
                         <div
                             ref={logoRef}
-                            className="text-white text-2xl sm:text-3xl mt-5 font-semibold hover:text-orange-300 transition-colors duration-300 cursor-pointer"
+                            className="flex flex-col text-white text-2xl sm:text-3xl mt-5 font-semibold hover:text-orange-300 transition-colors duration-300 cursor-pointer"
                             style={{
                                 textShadow: '1px 2px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.2)',
                                 WebkitTextStroke: '0.5px rgba(0, 0, 0, 0.3)'
                             }}
                         >
                             Stitching Bridges
+                            <span className="text-orange-500 text-sm ml-1">Building Contractors</span>
                         </div>
                     </Link>
 
