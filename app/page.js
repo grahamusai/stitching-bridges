@@ -3,12 +3,14 @@ import React, { useEffect } from "react";
 import { Navbar } from "./components/navbar";
 import { Hero } from "./components/hero";
 import { AboutSection } from "./components/about";
+import WhyUs from "./components/why-us";
 import { CounterSection } from "./components/counter-section";
+import { AnimatedTestimonialsDemo } from "./components/team";
 import { ServicesGrid } from "./components/services-grid";
 import { TestCounter } from "./components/test-counter";
 import { TestServices } from "./components/test-services";
 import { QualitySection } from "./components/quality-section";
-import Features from "./components/features";
+import Process from "./components/process";
 import WorldMap from "./components/world";
 import { CTASection } from "./components/cta-section";
 import { CustomCursor } from "./components/custom-cursor";
@@ -56,7 +58,9 @@ const Home = () => {
       {/* <CounterSection /> */}
       <TestCounter />
       <ServicesGrid />
-      {/* <TestServices /> */}
+      <AnimatedTestimonialsDemo />
+      <WhyUs />
+      <Process />
       <QualitySection />
       <WorldMap />
       <CTASection />

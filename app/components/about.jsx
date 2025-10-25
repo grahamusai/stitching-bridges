@@ -39,75 +39,9 @@ export function AboutSection() {
     ]
   }
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Image animation
-      gsap.fromTo(imageRef.current,
-        { opacity: 0, x: -100, rotation: -5 },
-        {
-          opacity: 1,
-          x: 0,
-          rotation: 0,
-          duration: 1.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-          }
-        }
-      )
 
-      // Title animation
-      gsap.fromTo(titleRef.current,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 85%",
-          }
-        }
-      )
 
-      // Features stagger animation
-      gsap.fromTo(featuresRef.current.children,
-        { opacity: 0, x: 50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 85%",
-          }
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
-
-  // Animate tab content changes
-  useEffect(() => {
-    if (featuresRef.current) {
-      gsap.fromTo(featuresRef.current.children,
-        { opacity: 0, x: 30 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.5,
-          stagger: 0.1,
-          ease: "power2.out"
-        }
-      )
-    }
-  }, [activeTab])
+ 
 
   return (
     <section id="about" ref={sectionRef} className="bg-[#181818] text-white py-20 px-8 md:mx-10 md:my-20 rounded-xl">
@@ -145,39 +79,21 @@ export function AboutSection() {
           {/* Right side - Content */}
           <div ref={contentRef} className="space-y-8">
             <h1 ref={titleRef} className="text-5xl lg:text-[50px] font-bold leading-tight">
-              Building with <span className="text-orange-500 hover:text-orange-400 transition-colors duration-300">trust</span>,<br />
-              driven by experience
+              About Us
             </h1>
 
-            {/* Tabs */}
-            <div className="space-y-6">
-              <div className="flex gap-8 border-b border-zinc-600">
-                {tabs.map((tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`pb-3 text-lg font-medium transition-all duration-300 hover:scale-105 ${activeTab === tab
-                      ? "text-orange-500 border-b-2 border-orange-500"
-                      : "text-gray-300 hover:text-white"
-                      }`}
-                  >
-                    {tab}
-                  </button>
-                ))}
-              </div>
-
-              {/* Features list */}
-              <div ref={featuresRef} className="space-y-4">
-                {tabContent[activeTab].map((feature, index) => (
-                  <div key={`${activeTab}-${index}`} className="flex items-center gap-3 group hover:translate-x-2 transition-transform duration-300">
-                    <div className="bg-orange-500 rounded-full p-1 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-gray-300 text-lg group-hover:text-white transition-colors duration-300">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <p>Across Zimbabwe, many people — especially in the diaspora — have faced disappointment
+              when sending money home to build. Projects stall, costs escalate, and trust disappears.
+              Locally, poor oversight and weak accountability have made construction a high-risk investment.
+            </p>
+            <p>
+              Stitching Bridges was created to change that. We are a construction and project management
+              company built on financial transparency, engineering discipline, and verified delivery. Every client&apos;s'
+              funds are managed through a regulated trust account through a Chartered Accountants firm, ensuring that payments are released only for certified work.
+            </p>
+            <p>We combine construction expertise with professional governance — giving clients full
+              visibility, reliable progress, and peace of mind wherever they are in the world.
+            </p>
           </div>
         </div>
       </div>

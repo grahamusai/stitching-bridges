@@ -10,8 +10,9 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {/* Logo/Brand */}
                     <div className="flex-shrink-0">
-                        <h2 className="text-xl font-bold text-black tracking-wide">
+                        <h2 className="flex flex-col text-xl font-bold text-black tracking-wide">
                             STITCHING BRIDGES
+                            <span className="text-orange-500 text-sm ml-1">Building Contractors</span>
                         </h2>
                     </div>
 

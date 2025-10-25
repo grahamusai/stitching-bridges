@@ -55,9 +55,7 @@ export function Hero() {
             <div className="relative z-10 max-w-6xl px-24 text-center md:text-left">
                 {/* Heading */}
                 <h1 ref={titleRef} className="hidden md:block mb-12 text-5xl font-bold text-white leading-tight">
-                    Building Your Vision <br />
-                    with Strength & <br />
-                    Precision
+                    Across Zimbabwe and beyond, <br />we are redefining how people <br /> build — with transparency, accountability, and real results.
                 </h1>
                 <h1 ref={titleRef} className="md:hidden mb-12 text-4xl font-bold text-white leading-tight">
                     Building Your Vision
