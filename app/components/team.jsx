@@ -23,7 +23,7 @@ export function AnimatedTestimonialsDemo() {
         "Precious leads Business Development and Marketing at Stitching Bridges. She holds a degree in Marketing from Womens University and a Marketing Management diploma with IAC. She is passionate about connecting people, projects, and opportunities. She brings energy and structure to how the brand grows — building client relationships, managing communications, and driving visibility in both local and diaspora markets.“For me, marketing is about trust — helping clients see value and feel confident from the first conversation.” amend to suit and send back",
       name: "Precious Mazhambe",
       designation: "Business Development & Marketing",
-      src: "/images/precious.jpeg",
+      src: "/images/Precious.jpg",
       saying : "For me, marketing is about trust — helping clients see value and feel confident from the first conversation.” amend to suit and send back"
     },
   ];
