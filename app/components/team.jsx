@@ -24,7 +24,7 @@ export function AnimatedTestimonialsDemo() {
       name: "Precious Mazhambe",
       designation: "Business Development & Marketing",
       src: "/images/Precious-image.jpg",
-      saying : "For me, marketing is about trust — helping clients see value and feel confident from the first conversation.” amend to suit and send back"
+      saying : "For me, marketing is about trust — helping clients see value and feel confident from the first conversation."
     },
   ];
   return <AnimatedTestimonials testimonials={testimonials} />;
